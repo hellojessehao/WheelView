@@ -281,9 +281,9 @@ public class WheelView extends ScrollView {
                 return;
             }
             if (position == i) {
-                itemView.setTextColor(Color.parseColor("#0288ce"));
+                itemView.setTextColor(Color.parseColor("#4A4A4A"));
             } else {
-                itemView.setTextColor(Color.parseColor("#bbbbbb"));
+                itemView.setTextColor(Color.parseColor("#D8D8D8"));
             }
         }
     }
@@ -310,47 +310,47 @@ public class WheelView extends ScrollView {
     Paint paint;
     int viewWidth;
 
-    @Override
-    public void setBackgroundDrawable(Drawable background) {
+//     @Override
+//     public void setBackgroundDrawable(Drawable background) {
 
-        if (viewWidth == 0) {
-            viewWidth = ((Activity) context).getWindowManager().getDefaultDisplay().getWidth();
-            Log.d(TAG, "viewWidth: " + viewWidth);
-        }
+//         if (viewWidth == 0) {
+//             viewWidth = ((Activity) context).getWindowManager().getDefaultDisplay().getWidth();
+//             Log.d(TAG, "viewWidth: " + viewWidth);
+//         }
 
-        if (null == paint) {
-            paint = new Paint();
-            paint.setColor(Color.parseColor("#83cde6"));
-            paint.setStrokeWidth(dip2px(1f));
-        }
+//         if (null == paint) {
+//             paint = new Paint();
+//             paint.setColor(Color.parseColor("#83cde6"));
+//             paint.setStrokeWidth(dip2px(1f));
+//         }
 
-        background = new Drawable() {
-            @Override
-            public void draw(Canvas canvas) {
-                canvas.drawLine(viewWidth * 1 / 6, obtainSelectedAreaBorder()[0], viewWidth * 5 / 6, obtainSelectedAreaBorder()[0], paint);
-                canvas.drawLine(viewWidth * 1 / 6, obtainSelectedAreaBorder()[1], viewWidth * 5 / 6, obtainSelectedAreaBorder()[1], paint);
-            }
+//         background = new Drawable() {
+//             @Override
+//             public void draw(Canvas canvas) {
+//                 canvas.drawLine(viewWidth * 1 / 6, obtainSelectedAreaBorder()[0], viewWidth * 5 / 6, obtainSelectedAreaBorder()[0], paint);
+//                 canvas.drawLine(viewWidth * 1 / 6, obtainSelectedAreaBorder()[1], viewWidth * 5 / 6, obtainSelectedAreaBorder()[1], paint);
+//             }
 
-            @Override
-            public void setAlpha(int alpha) {
+//             @Override
+//             public void setAlpha(int alpha) {
 
-            }
+//             }
 
-            @Override
-            public void setColorFilter(ColorFilter cf) {
+//             @Override
+//             public void setColorFilter(ColorFilter cf) {
 
-            }
+//             }
 
-            @Override
-            public int getOpacity() {
-                return 0;
-            }
-        };
+//             @Override
+//             public int getOpacity() {
+//                 return 0;
+//             }
+//         };
 
 
-        super.setBackgroundDrawable(background);
+//         super.setBackgroundDrawable(background);
 
-    }
+//     }
 
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
